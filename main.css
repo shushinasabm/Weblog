@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --pure-light-color: #fff;
+    --pure-dark-color: #000;
+    --primary-color: rgb(53, 52, 50);
+    --secondary-color: rgb(31, 30, 29);
+    --tertiery-color: rgb(83, 178, 226);
+    --fourth-color: rgb(234, 234, 234)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Pacifico", sans-serif;
+}
+
+#root {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+}
+
+.header .header-image {
+    width: 100%;
+    height: 150px;
+    background-image: url("/media/road.jpg");
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header .header-image {
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
+}
+
+.header h1,
+.header span,
+.header a {
+    color: var(--pure-light-color);
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Arimo", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    padding: 40px 0;
+}
+
+.navbar .navbar-links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.navbar .navbar-links a {
+    font-size: 0.7rem;
+    font-family: "Arimo", sans-serif;
+}
+
+.main {
+    width: calc(100% - 60px);
+    height: auto;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.main-column {
+    width: calc(33.3333%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog {
+    height: auto;
+    margin: 10px;
+    width: calc(100% - 20px - 20px);
+    background: var(--pure-light-color);
+    border-radius: 5px;
+    display: block;
+
+}
+
+.blog .blog-comment {
+    background: var(--fourth-color);
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+}
+
+.blog-header,
+.blog-comment,
+.blog-description,
+.blog-continue {
+    font-family: sans-serif;
+    display: block;
+}
+
+.blog-comment {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    font-size: 18px;
+    padding: 4%;
+
+}
+
+.blog .blog-comment {
+    box-sizing: border-box;
+
+}
+.blog-comment i {
+    margin-left: 20px;
+}
+
+.blog-header {
+    font-size: 2rem;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.blog-image {
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    transition: all .3s ease-in-out;
+    display: block;
+    box-sizing: border-box;
+}
+
+.blog-description {
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.blog-continue {
+    padding: 20px;
+    font-size: larger;
+    box-sizing: border-box;
+
+}
+
+.fa-magnifying-glass {
+    font-size: 1.5rem;
+    color: var(--pure-light-color);
+}
+.blog-footer {
+    height: auto;
+    margin: 10px;
+    width: calc(100% - 20px - 20px);
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+
+}
+.blog-footer-comment {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    font-size: 1rem;
+    color: var(--pure-light-color);
+
+}
+.blog-footer-comment:before {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    font-size: 18px;
+content: "\00bb";
+}
+.blog-footer-header {
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    color: var(--pure-light-color);
+    width: 100%;
+    padding: 10px;
+}
+.footer-column {
+
+    width: calc(33.3333%);
+    height: auto;
+    flex-direction: row;
+    display: flex;
+
+}
+.search {
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: "Arimo", sans-serif;
+    color: var(--pure-light-color);
+    width: 100%;
+    padding: 10px;
+    position: relative;
+
+}
+
+.input-search-footer {
+    width: 100%;
+    background-color:#121211;
+    border: none;
+    height: 50px;
+    padding-right: 30px;
+    font-family: "Arimo", sans-serif;
+color: var(--pure-light-color);
+    padding-left: 20px;
+    font-size: 1rem;
+}
+::placeholder {
+    color: var(--pure-light-color);
+    font-size: 1rem;
+    font-family: "Arimo", sans-serif;
+}
+
+.sign {
+    position: absolute;
+    top: 23px;
+    right: 30px;
+}
+.fa-arrow-up{
+    width: 30px;
+    height: 20px;
+    color: var(--pure-light-color)
+
+}
+
+.up {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+}
+.navbar-search {
+    margin-right: 50px;
+}
