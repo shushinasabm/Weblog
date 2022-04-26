@@ -4,6 +4,7 @@
     --pure-light-color: #fff;
     --pure-dark-color: #000;
     --primary-color: rgb(53, 52, 50);
+    --light-primary-color: #999;
     --secondary-color: rgb(31, 30, 29);
     --tertiery-color: rgb(83, 178, 226);
     --fourth-color: rgb(234, 234, 234)
@@ -39,6 +40,38 @@
     flex-direction: column;
 }
 
+.search-box {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--primary-color);
+    top: -150px;
+    transition: top 0.2s linear;
+}
+
+.search-box-opened {
+    top: 0 !important;
+}
+
+.search-box .search-box-header {
+    border: 1px dotted var(--pure-light-color);
+    font-size: 2.5em;
+    font-weight: 300;
+    left: 5%;
+    margin: -30px 0 0;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    width: 90%;
+    background: var(--primary-color);
+    padding: 10px;
+    outline: none;
+}
+
 .header .header-image {
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .25);
@@ -65,17 +98,31 @@
 }
 
 .navbar .navbar-links {
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-left: 80px;
+}
 
+.blog-media {
+    overflow: hidden !important;
+}
+
+.blog-media:hover .blog-image {
+    transform: scale(1.1);
 }
 
 .navbar .navbar-links a {
     font-size: 0.7rem;
     font-family: "Arimo", sans-serif;
+    color: var(--light-primary-color);
+    transition: color 0.2s linear;
+}
+
+.navbar .navbar-links a:hover {
+    color: var(--pure-light-color);
 }
 
 .main {
@@ -107,8 +154,8 @@
 
 .blog {
     height: auto;
-    margin: 10px;
-    width: calc(100% - 20px - 20px);
+    margin: 30px;
+    width: calc(100% - 60px);
     background: var(--pure-light-color);
     border-radius: 5px;
     display: block;
@@ -127,7 +174,8 @@
 .blog-header,
 .blog-comment,
 .blog-description,
-.blog-continue {
+.blog-continue,
+.blog-media {
     font-family: sans-serif;
     display: block;
 }
@@ -145,6 +193,7 @@
     box-sizing: border-box;
 
 }
+
 .blog-comment i {
     margin-left: 20px;
 }
@@ -181,7 +230,9 @@
 .fa-magnifying-glass {
     font-size: 1.5rem;
     color: var(--pure-light-color);
+    margin-right: 20px;
 }
+
 .blog-footer {
     height: auto;
     margin: 10px;
@@ -191,6 +242,7 @@
     padding: 10px;
 
 }
+
 .blog-footer-comment {
     width: 100%;
     padding: 10px;
@@ -200,13 +252,15 @@
     color: var(--pure-light-color);
 
 }
+
 .blog-footer-comment:before {
     width: 100%;
     box-sizing: border-box;
     font-family: "Arimo", sans-serif;
     font-size: 18px;
-content: "\00bb";
+    content: "\00bb";
 }
+
 .blog-footer-header {
     font-size: 1rem;
     box-sizing: border-box;
@@ -215,14 +269,14 @@ content: "\00bb";
     width: 100%;
     padding: 10px;
 }
-.footer-column {
 
+.footer-column {
     width: calc(33.3333%);
     height: auto;
     flex-direction: row;
     display: flex;
-
 }
+
 .search {
     font-size: 1rem;
     box-sizing: border-box;
@@ -236,18 +290,19 @@ content: "\00bb";
 
 .input-search-footer {
     width: 100%;
-    background-color:#121211;
+    background-color: #121211;
     border: none;
     height: 50px;
     padding-right: 30px;
     font-family: "Arimo", sans-serif;
-color: var(--pure-light-color);
+    color: var(--pure-light-color);
     padding-left: 20px;
     font-size: 1rem;
 }
+
 ::placeholder {
     color: var(--pure-light-color);
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "Arimo", sans-serif;
 }
 
@@ -256,19 +311,19 @@ color: var(--pure-light-color);
     top: 23px;
     right: 30px;
 }
-.fa-arrow-up{
+
+.fa-arrow-up {
     width: 30px;
     height: 20px;
     color: var(--pure-light-color)
-
 }
 
 .up {
     position: fixed;
     right: 20px;
     bottom: 20px;
-
 }
+
 .navbar-search {
     margin-right: 50px;
 }
